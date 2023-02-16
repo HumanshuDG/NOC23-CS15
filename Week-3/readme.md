@@ -10,6 +10,7 @@
 > - Ignore warnings about "Presentation errors".
 
 1. Define a Python function `remdup(l)` that takes a nonempty list of integers `l` and removes all duplicates in `l`, keeping only the last occurrence of each number.\
+
 For instance:
 ```
 >>> remdup([3, 1, 3,5])
@@ -23,6 +24,7 @@ For instance:
 ```
 
 2. Write a Python function `splitsum(l)` that takes a nonempty list of integers and returns a list [pos,neg], where pos is the sum of squares all the positive numbers in l and neg is the sum of cubes of all the negative numbers in l.\
+
 Here are some examples to show how your function should work:
 ```
 >>> splitsum([1,3,-5])
@@ -39,6 +41,7 @@ Here are some examples to show how your function should work:
 ```
 
 3. A two dimensional matrix can be represented in Python row-wise, as a list of lists: each inner list represents one row of the matrix.\
+
 For instance, the matrix:
 ```
 1  2  3
@@ -46,6 +49,7 @@ For instance, the matrix:
 7  8  9
 ```
 would be represented as `[[1, 2, 3], [4, 5, 6], [7, 8, 9]]`.\
+
 A horizonatal flip reflects each row. For instance, if we flip the previous matrix horizontally, we get:
 ```
 3  2  1
@@ -54,6 +58,7 @@ A horizonatal flip reflects each row. For instance, if we flip the previous matr
 ```
 which would be represented as `[[3, 2, 1], [6, 5, 4], [9, 8, 7]]`.\
 A vertical flip reflects each column.\
+
 For instance, if we flip the previous matrix that has already been flipped horizontally, we get:
 ```
 9  8  7
@@ -67,3 +72,35 @@ Write a Python function `matrixflip(m, d)` that takes as input a two dimensional
 - If `d == 'v'`, the function should retun the matrix flipped vertically.
 - For any other value of `d`, the function should return m unchanged.
 - In all cases, the argument m should remain undisturbed by the function.
+
+Here are some examples to show how your function should work. You may assume that the input to the function is always a non-empty matrix.
+```
+>>> myl = [[1, 2], [3, 4]]
+
+>>> myl
+[[1, 2], [3, 4]]  
+
+>>> matrixflip(myl, 'h')
+[[2, 1], [4, 3]]
+
+>>> myl
+[[1, 2], [3, 4]]  
+
+>>> matrixflip(myl, 'v')
+[[3, 4], [1, 2]]  
+
+>>> myl
+[[1, 2], [3, 4]]  
+
+>>> matrixflip(matrixflip(myl, 'h'), 'v')
+[[4, 3], [2, 1]]
+
+>>> myl
+[[1, 2], [3, 4]]  
+
+>>> matrixflip(matrixflip(myl, 'h'), 'v')
+[[4, 3], [2, 1]]
+
+>>> myl
+[[1, 2], [3, 4]]
+```
