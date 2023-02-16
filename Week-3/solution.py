@@ -19,7 +19,10 @@ def matrixflip(m, d):
     pass
 
 def matrixflip(m, d):
-    m_ = m.copy()
+    m_ = [[0 for _ in range(len(m))] for __ in range(len(m))]
+    for i in range(len(m)):
+        for j in range(len(m[i])):
+            m_[i][j] = m[i][j]
     if d == 'h':
         for i in range(0, len(m_), 1):
             m_[i].reverse()
