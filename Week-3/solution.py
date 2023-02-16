@@ -16,10 +16,7 @@ def splitsum(l: list):
     return [square_sum, cube_sum]
 
 def matrixflip(m, d):
-    pass
-
-def matrixflip(m, d):
-    m_ = [[0 for _ in range(len(m))] for __ in range(len(m))]
+    m_ = [[0 for _ in range(len(m[0]))] for __ in range(len(m))]
     for i in range(len(m)):
         for j in range(len(m[i])):
             m_[i][j] = m[i][j]
