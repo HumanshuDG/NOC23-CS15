@@ -7,7 +7,13 @@ def remdup(l: list):
     return duplicate
 
 def splitsum(l: list):
-    pass
+    square_sum, cube_sum = 0, 0
+    for num in l:
+        if num >= 0:
+            square_sum += num ** 2
+        else:
+            cube_sum += num ** 3
+    return [square_sum, cube_sum]
 
 def matrixflip(m, d):
     pass
