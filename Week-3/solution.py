@@ -17,3 +17,12 @@ def splitsum(l: list):
 
 def matrixflip(m, d):
     pass
+
+def matrixflip(m, d):
+    m_ = m.copy()
+    if d == 'h':
+        for i in range(0, len(m_), 1):
+            m_[i].reverse()
+    elif d == 'v':
+        m_.reverse()
+    return(m_)
